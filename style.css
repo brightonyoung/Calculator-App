@@ -1,0 +1,186 @@
+body {
+    margin: 20% auto;
+    width: 50%;
+    height: 75%;
+  }
+  
+  #result {
+    place-self: center;
+    font-size: 40pt;
+    color: rgb(66,74,38);
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  #first-label, #second-label {
+    align-self: end;
+    justify-self: center;
+    color: rgb(95,89,119);
+    font-size: 20pt;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  #first-Number, #second-Number {
+    background-color: rgb(156,160,76);
+    color: rgb(66,74,38);
+    border-radius: 25pt;
+    outline: none;
+    width: 200pt;
+    justify-self: center;
+    font-size: 25pt;
+    box-shadow: inset 0 0 10px #000000;
+    font-family: 'Press Start 2P', cursive;
+    
+  }
+  
+  #first-Number::placeholder {
+    font-size: 8pt;
+    text-align: center;
+  }
+  
+  #second-Number::placeholder {
+    font-size: 8pt;
+    text-align: center;
+  }
+  
+  input[type="text"]
+  {
+      font-size:50pt;
+  }
+  
+  #clear, #solve {
+    border-radius: 25pt;
+    align-self: end;
+    justify-self: center;
+    height: 50pt;
+    width: 150pt;
+    background-color: rgb(171,159,162);
+    font-size: 20pt;
+    box-shadow: -3pt 5pt rgb(106,100,96);
+  }
+  
+  .math-button {
+    border-radius: 50%;
+    padding: 0%;
+    width: 100pt;
+    background: rgb(175,79,119);
+    justify-self: center;
+    color: rgb(236,231,225);
+    font-size: 20pt;
+    box-shadow: -3pt 5pt rgb(122,59,78);
+  }
+  
+  /* calculator container components*/
+  
+  #result-wrapper {
+    grid-area: result-wrapper;
+    border-top: 25pt solid rgb(133,131,134);
+    border-bottom: 25pt solid rgb(133,131,134);
+    border-right: 40pt solid rgb(133,131,134);
+    border-left: 40pt solid rgb(133,131,134);
+    border-radius: 15pt;
+    background-color: rgb(156,160,76);
+    margin-top: 25pt;
+    display: grid;
+    box-shadow: inset 0 0 10px #000000;
+  }
+  
+  #all-the-buttons {
+    grid-area: all-the-buttons;
+  }
+  
+  #calc-container {
+    display: grid;
+    min-width: 540pt;
+    max-width: 540pt;
+    grid-template-columns: 250pt 250pt;
+    grid-template-rows: repeat(2, 100pt) 600pt;
+    grid-template-areas: 
+      "result-wrapper result-wrapper"
+      "result-wrapper result-wrapper"
+      "all-the-buttons all-the-buttons";
+    background-color: rgb(237,232,226);
+    border-radius: 15pt;
+    justify-content: center;
+    box-shadow: -3pt 5pt rgb(222,218,215);
+  }
+  
+  /*all-the-buttons container components*/
+  
+  #first-label {
+    grid-area: first-label;
+  }
+  
+  #second-label {
+    grid-area: second-label;
+  }
+  
+  #first-Number {
+    grid-area: first-number;
+  }
+  
+  #second-Number {
+    grid-area: second-number;
+  }
+  
+  #solve {
+    grid-area: solve;
+  }
+  
+  #clear {
+    grid-area: clear;
+  }
+  
+  #math-button-container {
+    grid-area: math-button-container;
+  }
+  
+  #all-the-buttons {
+    display: grid;
+    grid-template-columns: 250pt 250pt;
+    grid-template-rows: 50pt 50pt repeat(4, 100pt);
+    grid-template-areas:
+    "first-label second-label"
+    "first-number second-number"
+    "math-button-container math-button-container"
+    "math-button-container math-button-container"
+    "math-button-container math-button-container"
+    "clear solve";
+  }
+  
+  /* math-button-container components*/
+  
+  #addition {
+    grid-area: addition;
+    margin-top: 5pt;
+  }
+  
+  #subtraction {
+    grid-area: subtraction;
+    margin-top: 5pt;
+  }
+  
+  #multiplication {
+    grid-area: multiplication;
+  }
+  
+  #division {
+    grid-area: division;
+  }
+  
+  #modulus {
+    grid-area: modulus;
+  }
+  
+  #math-button-container {
+    display: grid;
+    grid-template-columns: 250pt 250pt;
+    grid-template-rows: repeat(3, 100pt);
+    grid-template-areas: 
+      "addition subtraction"
+      "multiplication division"
+      "modulus modulus";
+      grid-gap: 20pt;
+      align-self: center;
+      justify-self: center;
+      margin-top: 50pt;
+  }
